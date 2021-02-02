@@ -1,0 +1,20 @@
+.start-container {
+    &.container {
+        max-width: initial;
+        width: 100%;
+    }
+    .start-bg {
+        height: auto;
+        width: 100%
+    }
+    .start-btn {
+        margin: auto;
+        width: 200px;
+        .btn{
+            width: 100%;
+        }
+    }
+}
+body {
+    background: black;
+}

@@ -1,0 +1,44 @@
+$helvetica-display-path: "../assets/fonts/helvetica-display";
+$helvetica-text-path: "../assets/fonts/helvetica-text";
+$helvetica-micro-path: "../assets/fonts/helvetica-micro";
+
+$weight-type: (
+  100: "ultralight",
+  200: "thin",
+  300: "light",
+  400: "regular",
+  500: "medium",
+  600: "semibold",
+  700: "bold",
+  800: "heavy",
+  900: "black",
+);
+
+$helvetica-display-weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+$helvetica-text-weights: 100, 200, 300, 400, 500, 600, 700, 800;
+$helvetica-micro-weights: 200, 300, 400, 500, 700, 800;
+
+@mixin font($fontpath, $fontname, $fontpathname, $weight, $type, $format) {
+    @font-face {
+        src: url(#{$fontpath}/#{$fontpathname}-#{$type}.#{$format});
+        font-family: $fontname;
+        font-weight: $weight;
+    }
+    @font-face {
+        src: url(#{$fontpath}/#{$fontpathname}-#{$type}-italic.#{$format});
+        font-family: $fontname;
+        font-weight: $weight;
+        font-style: italic;
+    }  
+}
+@each $weight in $helvetica-display-weights {
+    @include font($helvetica-display-path, 'HelveticaNowDisplay','HelveticaNowDisplay', $weight, map-get($weight-type, $weight), 'otf')
+}
+@each $weight in $helvetica-text-weights {
+    @include font($helvetica-text-path, 'HelveticaNowText','HelveticaNowText', $weight, map-get($weight-type, $weight), 'otf')
+}
+@each $weight in $helvetica-micro-weights {
+    @include font($helvetica-micro-path, 'HelveticaNowMicro','HelveticaNowMicro', $weight, map-get($weight-type, $weight), 'otf')
+}
+
+

@@ -1,0 +1,9 @@
+$background-img: url('../../../assets/images/bodybg.jpeg');
+.heros-container {
+    &.container {
+        height: calc(100% - 60px);
+        overflow: auto;
+        max-width: initial;
+        background: #1c1b1b $background-img no-repeat center / cover !important;
+    }
+}

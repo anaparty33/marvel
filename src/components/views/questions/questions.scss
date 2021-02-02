@@ -1,0 +1,16 @@
+$background-img: url('../../../assets/images/bodybg.jpeg');
+.questions-container {
+    &.container {
+        overflow: auto;
+        height: calc(100% - 60px);
+        max-width: initial;
+        background: #1c1b1b $background-img no-repeat center / cover !important;
+    }
+    .question-form {
+        background: white;
+        padding: 15px;
+        border-radius: 3px;
+        width: 600px;
+        margin:  10% auto 0 auto;
+    }
+}

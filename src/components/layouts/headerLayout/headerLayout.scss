@@ -1,0 +1,79 @@
+.main.container-fluid {
+    background: #F8F9FC;
+    min-height: 100vh;
+    width: 100%;
+    display: block !important;
+    padding: 0;
+    .content {
+        width: 100%;
+        height: calc(100% - 87px);
+        overflow: auto;
+        .container {
+            // min-height: calc(100% - 40px) ;
+            width: 1020px;
+            margin: 20px auto;
+            background: white;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 10px 2px rgba(212, 212, 212, 0.6901960784313726);
+            border-radius: 3px;
+            background: white !important;
+            padding: 20px !important;
+            .MuiTabs-flexContainer {
+                $linecolor: #b1b1b1;
+                height: 40px;
+                position: relative;
+                padding-left: 20px;
+                overflow: initial;
+                display: block;
+                margin-top: 8px;
+                border-bottom: 1px solid $linecolor;
+                .MuiTab-root {
+                    height: inherit;
+                    min-height: initial;
+                    line-height: inherit;
+                    font-weight: 600;
+                    background: #dedede;
+                    border: 1px solid $linecolor;
+                    border-left: 0;
+                    opacity: inherit;
+                    &:first-child {
+                        border-left: 1px solid $linecolor;
+                    }
+                    color:#646464;
+                    &.Mui-selected {
+                        background: white;
+                        border-bottom: 0;
+                    }
+                }
+                .MuiTypography-subtitle1 {
+                    margin-right: 10px;
+                    color: #4baf50;
+                    text-decoration: underline;
+                    cursor: pointer;
+                    float: right;
+                }
+            }
+            .MuiTabs-indicator {
+                background-color: #316b34;
+                display: none;
+            }
+            .container-header {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+                padding: 10px 20px;
+                display: flex;
+                .header-info {
+                    font-size: 1.1em;
+                    font-weight: 600;
+                }
+                .header-actions {
+                    margin-left: auto;
+                    .action-btn {
+                        font-size: 0.8em;
+                        font-weight: 700;
+                        padding: 2px 8px;
+                    }
+                }
+            }
+        }
+    }
+}
